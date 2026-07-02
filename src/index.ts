@@ -196,7 +196,7 @@ export type OtpRecord = z.infer<typeof OtpRecordSchema>;
 
 export const SubscriptionPlanSchema = z.object({
   _id: IdSchema,
-  name: z.enum(["basic", "standard", "premium"]),
+  name: z.string(),
   displayName: z.string(),
   description: z.string().optional(),
   features: z.array(z.string()),

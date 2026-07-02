@@ -166,9 +166,9 @@ exports.OtpRecordSchema = zod_1.z.object({
 });
 exports.SubscriptionPlanSchema = zod_1.z.object({
     _id: exports.IdSchema,
-    name: zod_1.z.enum(["basic", "standard", "premium"]),
+    name: zod_1.z.string(),
     displayName: zod_1.z.string(),
-    description: zod_1.z.string(),
+    description: zod_1.z.string().optional(),
     features: zod_1.z.array(zod_1.z.string()),
     monthlyPrice: zod_1.z.number(),
     yearlyPrice: zod_1.z.number(),

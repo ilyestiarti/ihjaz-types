@@ -853,9 +853,9 @@ export declare const OtpRecordSchema: z.ZodObject<{
 export type OtpRecord = z.infer<typeof OtpRecordSchema>;
 export declare const SubscriptionPlanSchema: z.ZodObject<{
     _id: z.ZodString;
-    name: z.ZodEnum<["basic", "standard", "premium"]>;
+    name: z.ZodString;
     displayName: z.ZodString;
-    description: z.ZodString;
+    description: z.ZodOptional<z.ZodString>;
     features: z.ZodArray<z.ZodString, "many">;
     monthlyPrice: z.ZodNumber;
     yearlyPrice: z.ZodNumber;
@@ -867,31 +867,31 @@ export declare const SubscriptionPlanSchema: z.ZodObject<{
     updatedAt: z.ZodString;
 }, "strip", z.ZodTypeAny, {
     _id: string;
-    name: "basic" | "standard" | "premium";
+    name: string;
     createdAt: string;
     updatedAt: string;
     displayName: string;
-    description: string;
     features: string[];
     monthlyPrice: number;
     yearlyPrice: number;
     appointmentLimit: number | null;
     isActive: boolean;
     most: boolean;
+    description?: string | undefined;
     hasFreeTrial?: boolean | undefined;
 }, {
     _id: string;
-    name: "basic" | "standard" | "premium";
+    name: string;
     createdAt: string;
     updatedAt: string;
     displayName: string;
-    description: string;
     features: string[];
     monthlyPrice: number;
     yearlyPrice: number;
     appointmentLimit: number | null;
     isActive: boolean;
     most: boolean;
+    description?: string | undefined;
     hasFreeTrial?: boolean | undefined;
 }>;
 export type SubscriptionPlan = z.infer<typeof SubscriptionPlanSchema>;
