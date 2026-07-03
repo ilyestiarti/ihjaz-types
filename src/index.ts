@@ -28,6 +28,8 @@ export const UserSchema = z.object({
   lockedUntil: z.string().nullable().optional(),
   lastFailedLoginAt: z.string().nullable().optional(),
   tokenVersion: z.number().optional(),
+  totpSecret: z.string().nullable().optional(),
+  twoFactorEnabled: z.boolean().optional(),
 });
 export type User = z.infer<typeof UserSchema>;
 

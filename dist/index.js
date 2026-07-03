@@ -26,6 +26,8 @@ exports.UserSchema = zod_1.z.object({
     lockedUntil: zod_1.z.string().nullable().optional(),
     lastFailedLoginAt: zod_1.z.string().nullable().optional(),
     tokenVersion: zod_1.z.number().optional(),
+    totpSecret: zod_1.z.string().nullable().optional(),
+    twoFactorEnabled: zod_1.z.boolean().optional(),
 });
 exports.BusinessProfileSchema = zod_1.z.object({
     _id: exports.IdSchema,

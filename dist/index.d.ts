@@ -45,6 +45,8 @@ export declare const UserSchema: z.ZodObject<{
     lockedUntil: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     lastFailedLoginAt: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     tokenVersion: z.ZodOptional<z.ZodNumber>;
+    totpSecret: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    twoFactorEnabled: z.ZodOptional<z.ZodBoolean>;
 }, "strip", z.ZodTypeAny, {
     _id: string;
     name: string;
@@ -67,6 +69,8 @@ export declare const UserSchema: z.ZodObject<{
     lockedUntil?: string | null | undefined;
     lastFailedLoginAt?: string | null | undefined;
     tokenVersion?: number | undefined;
+    totpSecret?: string | null | undefined;
+    twoFactorEnabled?: boolean | undefined;
 }, {
     _id: string;
     name: string;
@@ -89,6 +93,8 @@ export declare const UserSchema: z.ZodObject<{
     lockedUntil?: string | null | undefined;
     lastFailedLoginAt?: string | null | undefined;
     tokenVersion?: number | undefined;
+    totpSecret?: string | null | undefined;
+    twoFactorEnabled?: boolean | undefined;
 }>;
 export type User = z.infer<typeof UserSchema>;
 export declare const BusinessProfileSchema: z.ZodObject<{
