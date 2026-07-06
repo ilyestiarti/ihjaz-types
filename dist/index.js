@@ -67,6 +67,7 @@ exports.PlaceSchema = zod_1.z.object({
     reviewCount: zod_1.z.number().optional(),
     ratingSum: zod_1.z.number().optional(),
     isBlocked: zod_1.z.boolean().optional().default(false),
+    acceptExternal: zod_1.z.boolean().optional().default(true),
     createdAt: zod_1.z.string(),
     updatedAt: zod_1.z.string(),
 });

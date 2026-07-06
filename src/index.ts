@@ -79,6 +79,7 @@ export const PlaceSchema = z.object({
   reviewCount: z.number().optional(),
   ratingSum: z.number().optional(),
   isBlocked: z.boolean().optional().default(false),
+  acceptExternal: z.boolean().optional().default(true),
   createdAt: z.string(),
   updatedAt: z.string(),
 });

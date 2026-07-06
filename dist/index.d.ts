@@ -304,6 +304,7 @@ export declare const PlaceSchema: z.ZodObject<{
     reviewCount: z.ZodOptional<z.ZodNumber>;
     ratingSum: z.ZodOptional<z.ZodNumber>;
     isBlocked: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+    acceptExternal: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
     createdAt: z.ZodString;
     updatedAt: z.ZodString;
 }, "strip", z.ZodTypeAny, {
@@ -317,6 +318,7 @@ export declare const PlaceSchema: z.ZodObject<{
     longitude: number;
     hasActiveSubscription: boolean;
     isBlocked: boolean;
+    acceptExternal: boolean;
     type?: string | null | undefined;
     address?: string | null | undefined;
     openingHours?: {
@@ -364,6 +366,7 @@ export declare const PlaceSchema: z.ZodObject<{
     reviewCount?: number | undefined;
     ratingSum?: number | undefined;
     isBlocked?: boolean | undefined;
+    acceptExternal?: boolean | undefined;
 }>;
 export type Place = z.infer<typeof PlaceSchema>;
 export declare const GeocodedPlaceSchema: z.ZodObject<{
@@ -381,6 +384,7 @@ export declare const GeocodedPlaceSchema: z.ZodObject<{
     reviewCount: z.ZodOptional<z.ZodNumber>;
     ratingSum: z.ZodOptional<z.ZodNumber>;
     isBlocked: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+    acceptExternal: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
 } & {
     isGeocoded: z.ZodLiteral<true>;
     displayName: z.ZodString;
@@ -399,6 +403,7 @@ export declare const GeocodedPlaceSchema: z.ZodObject<{
     address: string;
     hasActiveSubscription: boolean;
     isBlocked: boolean;
+    acceptExternal: boolean;
     isGeocoded: true;
     displayName: string;
     geocodingType: string;
@@ -430,6 +435,7 @@ export declare const GeocodedPlaceSchema: z.ZodObject<{
     reviewCount?: number | undefined;
     ratingSum?: number | undefined;
     isBlocked?: boolean | undefined;
+    acceptExternal?: boolean | undefined;
 }>;
 export type GeocodedPlace = z.infer<typeof GeocodedPlaceSchema>;
 export declare const BlockingSchema: z.ZodObject<{
