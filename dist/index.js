@@ -55,6 +55,7 @@ exports.PlaceSchema = zod_1.z.object({
     _id: exports.IdSchema,
     userId: exports.IdSchema,
     photo: zod_1.z.string(),
+    coverPhoto: zod_1.z.string().nullable().optional(),
     name: zod_1.z.string(),
     latitude: zod_1.z.number(),
     longitude: zod_1.z.number(),

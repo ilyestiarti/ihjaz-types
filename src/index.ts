@@ -67,6 +67,7 @@ export const PlaceSchema = z.object({
   _id: IdSchema,
   userId: IdSchema,
   photo: z.string(),
+  coverPhoto: z.string().nullable().optional(),
   name: z.string(),
   latitude: z.number(),
   longitude: z.number(),

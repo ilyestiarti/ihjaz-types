@@ -245,6 +245,7 @@ export declare const PlaceSchema: z.ZodObject<{
     _id: z.ZodString;
     userId: z.ZodString;
     photo: z.ZodString;
+    coverPhoto: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     name: z.ZodString;
     latitude: z.ZodNumber;
     longitude: z.ZodNumber;
@@ -320,6 +321,7 @@ export declare const PlaceSchema: z.ZodObject<{
     isBlocked: boolean;
     acceptExternal: boolean;
     type?: string | null | undefined;
+    coverPhoto?: string | null | undefined;
     address?: string | null | undefined;
     openingHours?: {
         day: number;
@@ -348,6 +350,7 @@ export declare const PlaceSchema: z.ZodObject<{
     longitude: number;
     hasActiveSubscription: boolean;
     type?: string | null | undefined;
+    coverPhoto?: string | null | undefined;
     address?: string | null | undefined;
     openingHours?: {
         day: number;
@@ -376,6 +379,7 @@ export declare const GeocodedPlaceSchema: z.ZodObject<{
     photo: z.ZodString;
     createdAt: z.ZodString;
     updatedAt: z.ZodString;
+    coverPhoto: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     latitude: z.ZodNumber;
     longitude: z.ZodNumber;
     subscriptionId: z.ZodOptional<z.ZodString>;
@@ -410,6 +414,7 @@ export declare const GeocodedPlaceSchema: z.ZodObject<{
     geocodingClass: string;
     importance: number;
     type?: string | null | undefined;
+    coverPhoto?: string | null | undefined;
     subscriptionId?: string | undefined;
     averageRating?: number | null | undefined;
     reviewCount?: number | undefined;
@@ -430,6 +435,7 @@ export declare const GeocodedPlaceSchema: z.ZodObject<{
     geocodingClass: string;
     importance: number;
     type?: string | null | undefined;
+    coverPhoto?: string | null | undefined;
     subscriptionId?: string | undefined;
     averageRating?: number | null | undefined;
     reviewCount?: number | undefined;
