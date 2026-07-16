@@ -44,6 +44,7 @@ exports.TimeSlotSchema = zod_1.z.object({
     enableGuest: zod_1.z.boolean().nullable().optional(),
     requireName: zod_1.z.boolean().nullable().optional(),
     requirePhone: zod_1.z.boolean().nullable().optional(),
+    price: zod_1.z.number().nullable().optional(),
 });
 exports.DayScheduleSchema = zod_1.z.object({
     day: zod_1.z.number().min(0).max(6),
@@ -120,6 +121,9 @@ exports.AppointmentSchema = zod_1.z.object({
         phone: zod_1.z.string().nullable().optional(),
     }).nullable().optional(),
     calendarEventId: zod_1.z.string().nullable().optional(),
+    price: zod_1.z.number().nullable().optional(),
+    chargilyCheckoutId: zod_1.z.string().nullable().optional(),
+    paymentStatus: zod_1.z.enum(["unpaid", "paid", "failed"]).nullable().optional(),
     createdAt: zod_1.z.string(),
     updatedAt: zod_1.z.string(),
     user: zod_1.z.object({
@@ -203,7 +207,8 @@ exports.PlaceSubscriptionSchema = zod_1.z.object({
 exports.PaymentTransactionSchema = zod_1.z.object({
     _id: exports.IdSchema,
     userId: exports.IdSchema,
-    placeSubscriptionId: exports.IdSchema,
+    placeSubscriptionId: exports.IdSchema.nullable().optional(),
+    appointmentId: exports.IdSchema.optional(),
     placeId: exports.IdSchema,
     amount: zod_1.z.number(),
     currency: zod_1.z.string(),

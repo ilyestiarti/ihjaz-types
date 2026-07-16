@@ -50,6 +50,7 @@ export const TimeSlotSchema = z.object({
   enableGuest: z.boolean().nullable().optional(),
   requireName: z.boolean().nullable().optional(),
   requirePhone: z.boolean().nullable().optional(),
+  price: z.number().nullable().optional(),
 });
 export type TimeSlot = z.infer<typeof TimeSlotSchema>;
 
@@ -142,6 +143,9 @@ export const AppointmentSchema = z.object({
     phone: z.string().nullable().optional(),
   }).nullable().optional(),
   calendarEventId: z.string().nullable().optional(),
+  price: z.number().nullable().optional(),
+  chargilyCheckoutId: z.string().nullable().optional(),
+  paymentStatus: z.enum(["unpaid", "paid", "failed"]).nullable().optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
   user: z.object({
@@ -237,7 +241,8 @@ export type PlaceSubscription = z.infer<typeof PlaceSubscriptionSchema>;
 export const PaymentTransactionSchema = z.object({
   _id: IdSchema,
   userId: IdSchema,
-  placeSubscriptionId: IdSchema,
+  placeSubscriptionId: IdSchema.nullable().optional(),
+  appointmentId: IdSchema.optional(),
   placeId: IdSchema,
   amount: z.number(),
   currency: z.string(),

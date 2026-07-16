@@ -127,6 +127,7 @@ export declare const TimeSlotSchema: z.ZodObject<{
     enableGuest: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
     requireName: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
     requirePhone: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
+    price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
 }, "strip", z.ZodTypeAny, {
     open: string;
     close: string;
@@ -134,6 +135,7 @@ export declare const TimeSlotSchema: z.ZodObject<{
     enableGuest?: boolean | null | undefined;
     requireName?: boolean | null | undefined;
     requirePhone?: boolean | null | undefined;
+    price?: number | null | undefined;
 }, {
     open: string;
     close: string;
@@ -141,6 +143,7 @@ export declare const TimeSlotSchema: z.ZodObject<{
     enableGuest?: boolean | null | undefined;
     requireName?: boolean | null | undefined;
     requirePhone?: boolean | null | undefined;
+    price?: number | null | undefined;
 }>;
 export type TimeSlot = z.infer<typeof TimeSlotSchema>;
 export declare const DayScheduleSchema: z.ZodObject<{
@@ -152,6 +155,7 @@ export declare const DayScheduleSchema: z.ZodObject<{
         enableGuest: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
         requireName: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
         requirePhone: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
+        price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     }, "strip", z.ZodTypeAny, {
         open: string;
         close: string;
@@ -159,6 +163,7 @@ export declare const DayScheduleSchema: z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }, {
         open: string;
         close: string;
@@ -166,6 +171,7 @@ export declare const DayScheduleSchema: z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }>, "many">;
     enabled: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
 }, "strip", z.ZodTypeAny, {
@@ -177,6 +183,7 @@ export declare const DayScheduleSchema: z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }[];
     enabled: boolean;
 }, {
@@ -188,6 +195,7 @@ export declare const DayScheduleSchema: z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }[];
     enabled?: boolean | undefined;
 }>;
@@ -201,6 +209,7 @@ export declare const OpeningHoursSchema: z.ZodArray<z.ZodObject<{
         enableGuest: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
         requireName: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
         requirePhone: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
+        price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     }, "strip", z.ZodTypeAny, {
         open: string;
         close: string;
@@ -208,6 +217,7 @@ export declare const OpeningHoursSchema: z.ZodArray<z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }, {
         open: string;
         close: string;
@@ -215,6 +225,7 @@ export declare const OpeningHoursSchema: z.ZodArray<z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }>, "many">;
     enabled: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
 }, "strip", z.ZodTypeAny, {
@@ -226,6 +237,7 @@ export declare const OpeningHoursSchema: z.ZodArray<z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }[];
     enabled: boolean;
 }, {
@@ -237,6 +249,7 @@ export declare const OpeningHoursSchema: z.ZodArray<z.ZodObject<{
         enableGuest?: boolean | null | undefined;
         requireName?: boolean | null | undefined;
         requirePhone?: boolean | null | undefined;
+        price?: number | null | undefined;
     }[];
     enabled?: boolean | undefined;
 }>, "many">;
@@ -260,6 +273,7 @@ export declare const PlaceSchema: z.ZodObject<{
             enableGuest: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
             requireName: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
             requirePhone: z.ZodOptional<z.ZodNullable<z.ZodBoolean>>;
+            price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
         }, "strip", z.ZodTypeAny, {
             open: string;
             close: string;
@@ -267,6 +281,7 @@ export declare const PlaceSchema: z.ZodObject<{
             enableGuest?: boolean | null | undefined;
             requireName?: boolean | null | undefined;
             requirePhone?: boolean | null | undefined;
+            price?: number | null | undefined;
         }, {
             open: string;
             close: string;
@@ -274,6 +289,7 @@ export declare const PlaceSchema: z.ZodObject<{
             enableGuest?: boolean | null | undefined;
             requireName?: boolean | null | undefined;
             requirePhone?: boolean | null | undefined;
+            price?: number | null | undefined;
         }>, "many">;
         enabled: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
     }, "strip", z.ZodTypeAny, {
@@ -285,6 +301,7 @@ export declare const PlaceSchema: z.ZodObject<{
             enableGuest?: boolean | null | undefined;
             requireName?: boolean | null | undefined;
             requirePhone?: boolean | null | undefined;
+            price?: number | null | undefined;
         }[];
         enabled: boolean;
     }, {
@@ -296,6 +313,7 @@ export declare const PlaceSchema: z.ZodObject<{
             enableGuest?: boolean | null | undefined;
             requireName?: boolean | null | undefined;
             requirePhone?: boolean | null | undefined;
+            price?: number | null | undefined;
         }[];
         enabled?: boolean | undefined;
     }>, "many">>>;
@@ -332,6 +350,7 @@ export declare const PlaceSchema: z.ZodObject<{
             enableGuest?: boolean | null | undefined;
             requireName?: boolean | null | undefined;
             requirePhone?: boolean | null | undefined;
+            price?: number | null | undefined;
         }[];
         enabled: boolean;
     }[] | null | undefined;
@@ -361,6 +380,7 @@ export declare const PlaceSchema: z.ZodObject<{
             enableGuest?: boolean | null | undefined;
             requireName?: boolean | null | undefined;
             requirePhone?: boolean | null | undefined;
+            price?: number | null | undefined;
         }[];
         enabled?: boolean | undefined;
     }[] | null | undefined;
@@ -538,6 +558,9 @@ export declare const AppointmentSchema: z.ZodObject<{
         phone?: string | null | undefined;
     }>>>;
     calendarEventId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    chargilyCheckoutId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    paymentStatus: z.ZodOptional<z.ZodNullable<z.ZodEnum<["unpaid", "paid", "failed"]>>>;
     createdAt: z.ZodString;
     updatedAt: z.ZodString;
     user: z.ZodOptional<z.ZodObject<{
@@ -599,6 +622,7 @@ export declare const AppointmentSchema: z.ZodObject<{
     startTime: string;
     endTime: string;
     requestedBy: "user" | "business";
+    price?: number | null | undefined;
     user?: {
         _id: string;
         name: string;
@@ -619,6 +643,8 @@ export declare const AppointmentSchema: z.ZodObject<{
         phone?: string | null | undefined;
     } | null | undefined;
     calendarEventId?: string | null | undefined;
+    chargilyCheckoutId?: string | null | undefined;
+    paymentStatus?: "unpaid" | "paid" | "failed" | null | undefined;
     place?: {
         _id: string;
         name: string;
@@ -636,6 +662,7 @@ export declare const AppointmentSchema: z.ZodObject<{
     startTime: string;
     endTime: string;
     requestedBy: "user" | "business";
+    price?: number | null | undefined;
     user?: {
         _id: string;
         name: string;
@@ -656,6 +683,8 @@ export declare const AppointmentSchema: z.ZodObject<{
         phone?: string | null | undefined;
     } | null | undefined;
     calendarEventId?: string | null | undefined;
+    chargilyCheckoutId?: string | null | undefined;
+    paymentStatus?: "unpaid" | "paid" | "failed" | null | undefined;
     place?: {
         _id: string;
         name: string;
@@ -687,6 +716,9 @@ export declare const AppointmentWithUserSchema: z.ZodObject<{
         phone?: string | null | undefined;
     }>>>;
     calendarEventId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    price: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
+    chargilyCheckoutId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    paymentStatus: z.ZodOptional<z.ZodNullable<z.ZodEnum<["unpaid", "paid", "failed"]>>>;
     createdAt: z.ZodString;
     updatedAt: z.ZodString;
     place: z.ZodOptional<z.ZodObject<{
@@ -755,6 +787,7 @@ export declare const AppointmentWithUserSchema: z.ZodObject<{
     startTime: string;
     endTime: string;
     requestedBy: "user" | "business";
+    price?: number | null | undefined;
     slotId?: string | null | undefined;
     business?: {
         _id: string;
@@ -769,6 +802,8 @@ export declare const AppointmentWithUserSchema: z.ZodObject<{
         phone?: string | null | undefined;
     } | null | undefined;
     calendarEventId?: string | null | undefined;
+    chargilyCheckoutId?: string | null | undefined;
+    paymentStatus?: "unpaid" | "paid" | "failed" | null | undefined;
     place?: {
         _id: string;
         name: string;
@@ -792,6 +827,7 @@ export declare const AppointmentWithUserSchema: z.ZodObject<{
     startTime: string;
     endTime: string;
     requestedBy: "user" | "business";
+    price?: number | null | undefined;
     slotId?: string | null | undefined;
     business?: {
         _id: string;
@@ -806,6 +842,8 @@ export declare const AppointmentWithUserSchema: z.ZodObject<{
         phone?: string | null | undefined;
     } | null | undefined;
     calendarEventId?: string | null | undefined;
+    chargilyCheckoutId?: string | null | undefined;
+    paymentStatus?: "unpaid" | "paid" | "failed" | null | undefined;
     place?: {
         _id: string;
         name: string;
@@ -966,7 +1004,8 @@ export type PlaceSubscription = z.infer<typeof PlaceSubscriptionSchema>;
 export declare const PaymentTransactionSchema: z.ZodObject<{
     _id: z.ZodString;
     userId: z.ZodString;
-    placeSubscriptionId: z.ZodString;
+    placeSubscriptionId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    appointmentId: z.ZodOptional<z.ZodString>;
     placeId: z.ZodString;
     amount: z.ZodNumber;
     currency: z.ZodString;
@@ -984,11 +1023,12 @@ export declare const PaymentTransactionSchema: z.ZodObject<{
     userId: string;
     placeId: string;
     chargilyCheckoutId: string;
-    placeSubscriptionId: string;
     amount: number;
     currency: string;
     paymentMethod: string;
     metadata: Record<string, string | number | boolean>;
+    appointmentId?: string | undefined;
+    placeSubscriptionId?: string | null | undefined;
 }, {
     status: "pending" | "completed" | "failed" | "refunded";
     _id: string;
@@ -997,11 +1037,12 @@ export declare const PaymentTransactionSchema: z.ZodObject<{
     userId: string;
     placeId: string;
     chargilyCheckoutId: string;
-    placeSubscriptionId: string;
     amount: number;
     currency: string;
     paymentMethod: string;
     metadata: Record<string, string | number | boolean>;
+    appointmentId?: string | undefined;
+    placeSubscriptionId?: string | null | undefined;
 }>;
 export type PaymentTransaction = z.infer<typeof PaymentTransactionSchema>;
 export declare const NotificationSchema: z.ZodObject<{
